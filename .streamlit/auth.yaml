@@ -3,27 +3,27 @@ credentials:
     jose:
       email: joseluis.perez@once.es
       name: José Luis Pérez
-      password: '$2b$12$nv5.X62qyL9CXcm0zcITm.pzdwS3e7f6OesCECv.gloCnZZwyfsVi'  # megustaworkday
+      password: '$2b$12$ePe.yO3Q5GwIulemUPWdoe/WDl.C2NTsSdShqYb1cS9wyFUxT/sPG'
     antonio:
       email: antomahe@once.es
       name: Antonio
-      password: '$2b$12$OQKpTPSNI4RiC56GDoR6yuiP6r4ZlDCeFvl0wU3WKaD7QS9bJpJrC'  # amh123
+      password: '$2b$12$xEUh7Ox3inO/WzqEiXfXJ.E8VV6QRPntN20b5PFe7m0VUdZNtUqGa'
     carroyom:
       email: carroyom@ayesa.com
       name: Carmen Arroyo
-      password: '$2b$12$hHCd5s59dESpv6CWWObX7urhfzbtcDtKh92ebiN4bWUeqDCAk7h9y'  # Excelgirl123
+      password: '$2b$12$sNu4UslSbdKcnAispxm1TOOoZrR48jpsH8O8OXJdXa7QLnNOnHNQS'
     fernando:
       email: ferofe@once.es
       name: Fernando
-      password: '$2b$12$X6B25nwsWQJh6Kb5.qtfeO5x7am3ljLSqlJNtDzTpyhqj0Ct6Em2i'  # Ferofe123
+      password: '$2b$12$rwIETVvpQd7N2IXLEHMRcexZt/VpwyDHNy2XSQxv0v4X5yma5i41u'
     carmen:
       email: mprpg@once.es
       name: Carmen Prats
-      password: '$2b$12$JuihWGx9nDGRPNiMNo81W.83FDbBHdwA3R092pcgp4fyZ.wnoV7sG'  # mprpg11
+      password: '$2b$12$A6wulHJOSYcaUnE4MGZThuNxkaKriIWu./OSl2GObq3vMgsp2FLzy'
     alberto:
       email: albebaco@once.es
       name: Alberto Barragán
-      password: '$2b$12$OQKpTPSNI4RiC56GDoR6yuiP6r4ZlDCeFvl0wU3WKaD7QS9bJpJrC'  # amh123
+      password: '$2b$12$OQKpTPSNI4RiC56GDoR6yuiP6r4ZlDCeFvl0wU3WKaD7QS9bJpJrC'
 cookie:
   expiry_days: 0
   key: some_signature_key
