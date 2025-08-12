@@ -37,6 +37,26 @@ htmlcov/
 .idea/
 *.code-workspace
 
+# JetBrains (IntelliJ, PyCharm, WebStorm, Rider)
+*.iml
+out/
+
+# Eclipse / STS
+.metadata
+.settings/
+.project
+.classpath
+.factorypath
+.loadpath
+.recommenders
+.externalToolBuilders/
+*.launch
+bin/
+tmp/
+.sts4-cache/
+.apt_generated/
+.apt_generated_test/
+
 # Logs and runtime data
 *.log
 logs/**
