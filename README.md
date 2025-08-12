@@ -1,4 +1,5 @@
-# Generador de ficheros de datos (Streamlit)
+# Generador de ficheros de datos de test
+## Aplicación web para generar, comprimir y descargar ficheros de datos de prueba para los test automáticos del _Portal del Empleado_.
 
 [![Made with Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://streamlit.io)
 ![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
@@ -9,11 +10,10 @@
 ![OS](https://img.shields.io/badge/OS-Windows%2010%2F11-0078D6?logo=windows)
 ![GPT-5](https://img.shields.io/badge/GPT--5-262626?logo=openai&logoColor=white)
 
-Aplicación web (Streamlit) para generar, comprimir y descargar ficheros de datos de prueba a partir de una base de datos SQLite. Incluye autenticación con `streamlit-authenticator` y limpieza automática de datos al finalizar la sesión.
 
 ## Qué puedes hacer con esta app
 - Acceder con usuario/contraseña y mantener una sesión segura.
-- Subir un fichero SQLite (.sqlite / .db) como fuente de datos.
+- Subir un fichero SQLite (.sqlite / .db) como fuente de datos con la que trabajar.
 - Generar ficheros de datos (.txt) y empaquetarlos en .zip automáticamente.
 - Descargar los paquetes .zip generados desde la propia app.
 - Revisar el log del proceso de generación.
@@ -24,12 +24,15 @@ Aplicación web (Streamlit) para generar, comprimir y descargar ficheros de dato
 - SQLite (fuente de datos)
 - PyYAML (configuración)
 
-## Requisitos
-- Python 3.12.11
-- Windows 10/11
+## Requisitos para su despliegue
+- Probado para Python 3.12 y superiores
+- Testeado en Windows 10/11, Linux, y MAC (iOS)
 
 ## Puesta en marcha
-1) (Opcional) Crear y activar un entorno virtual
+
+Pasos para despliegue en el equipo local. Para desplegar en Cloud puede haber variantes en función de la plataforma concreta.
+
+1) (_Opcional_) Crear y activar un entorno virtual
 
 ```pwsh
 python -m venv .venv
@@ -44,8 +47,8 @@ python -m pip install -r requirements.txt
 ```
 
 3) Configurar credenciales y secretos
-- Usuarios y cookies: `.streamlit/auth.yaml` (incluido en el proyecto).
-- Secretos para generación (usados en `pages/3_🤹‍♂️_Generar_ficheros.py`): crea `.streamlit/secrets.toml` con:
+- Usuarios y cookies: `.streamlit/auth.yaml` (claves hasheadas por seguridad).
+- Secretos para generación codificados y usados como variables de entorno seguras. No se suben a repositorio.
 
 ```toml
 [portal_credentials]
@@ -55,11 +58,13 @@ claveGestiona = "*******"
 
 4) Ejecutar la app
 
+Se despliega la APP con el fichero _entrypoint_ como se muestra:
+
 ```pwsh
 streamlit run "1_🏠_Inicio.py"
 ```
 
-> Si el puerto 8501 está ocupado, añade `--server.port 8502`.
+> Si el puerto 8501 no está disponible, podemos poner otro `--server.port 8502`.
 
 ## Manual de usuario
 ### 1. Inicio (Login)
@@ -82,7 +87,7 @@ streamlit run "1_🏠_Inicio.py"
 - Desde la barra lateral pulsa “Cerrar sesión”.
 - La app borra `db/` y `files/` para preservar la confidencialidad de los datos.
 
-## Sobre Streamlit y posibilidades
+## Sobre Streamlit
 - Libre y open source (Sin licencias de pago. Puede usarse comercialmente)
 - Widgets interactivos (subida de archivos, botones, selectores, desplegables, checks, etc.).
 - Ideal para Data Science (Se integra con Pandas, Matplotlib, Plotly, Seaborn, Altair, Scikit-learn, etc.)
@@ -91,13 +96,13 @@ streamlit run "1_🏠_Inicio.py"
 - Despliegue sencillo local o en la nube (Streamlit Cloud u otros PaaS).
 - Extensible con multitud de componentes de terceros (p. ej., `extra-streamlit-components`, utilizado por `streamlit-authenticator`).
 
-## Estructura principal
+## Ficheros principales
 - `1_🏠_Inicio.py`: entrada y login.
 - `pages/2_📤_Subir_Base_de_Datos.py`: carga de BD.
 - `pages/3_🤹‍♂️_Generar_ficheros.py`: generación y empaquetado.
 - `pages/4_📥_Descargar_ficheros.py`: descarga de zips.
-- `utils.py`: utilidades de borrado, zip y nombres.
-- `logs/files_creation.log`: log del proceso de generación.
+- `utils.py`: utilidades de borrado, compresión de ficheros, y funciones auxiliares.
+- `logs/files_creation.log`: log del proceso, accesibles para role _admin_.
 
 ## Autores
 Antonio y su nuevo amigo (![GPT-5](https://img.shields.io/badge/GPT--5-262626?logo=openai&logoColor=white))
