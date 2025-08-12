@@ -57,6 +57,40 @@ tmp/
 .apt_generated/
 .apt_generated_test/
 
+# NetBeans
+nbproject/private/
+nbbuild/
+nbdist/
+dist/
+build/
+.nb-gradle/
+.netbeans/
+.netbeans-derby/
+
+# Visual Studio (not Code)
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+[Bb]in/
+[Oo]bj/
+[Dd]ebug*/
+[Rr]elease*/
+[Xx]64/
+[Xx]86/
+*.ipch
+*.pch
+*.obj
+*.idb
+*.ilk
+*.pdb
+*.aps
+*.ncb
+*.opendb
+*.VC.db
+*.vcxproj.user
+
 # Logs and runtime data
 *.log
 logs/**
