@@ -1,0 +1,14 @@
+# Minimal runtime dependencies for the Streamlit app (Python 3.12.11)
+# Only external packages used by the codebase; no stdlib modules.
+# Para despliegue en Streamlit Cloud no pongo vesiones.
+# Ni siquiera pongo el propio Streamlit
+# Con versiones sería así:
+#   streamlit==1.47.1
+#   streamlit-authenticator==0.4.2
+#   PyYAML==6.0.2
+# https://docs.streamlit.io/streamlit-cloud/deploying
+#
+
+streamlit
+streamlit-authenticator
+PyYAML

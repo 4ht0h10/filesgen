@@ -1,0 +1,40 @@
+credentials:
+  usernames:
+    jose:
+      email: joseluis.perez@once.es
+      name: José Luis Pérez
+      password: '$2b$12$nv5.X62qyL9CXcm0zcITm.pzdwS3e7f6OesCECv.gloCnZZwyfsVi'  # megustaworkday
+    antonio:
+      email: antomahe@once.es
+      name: Antonio
+      password: '$2b$12$OQKpTPSNI4RiC56GDoR6yuiP6r4ZlDCeFvl0wU3WKaD7QS9bJpJrC'  # amh123
+    carroyom:
+      email: carroyom@ayesa.com
+      name: Carmen Arroyo
+      password: '$2b$12$hHCd5s59dESpv6CWWObX7urhfzbtcDtKh92ebiN4bWUeqDCAk7h9y'  # Excelgirl123
+    fernando:
+      email: ferofe@once.es
+      name: Fernando
+      password: '$2b$12$X6B25nwsWQJh6Kb5.qtfeO5x7am3ljLSqlJNtDzTpyhqj0Ct6Em2i'  # Ferofe123
+    carmen:
+      email: mprpg@once.es
+      name: Carmen Prats
+      password: '$2b$12$JuihWGx9nDGRPNiMNo81W.83FDbBHdwA3R092pcgp4fyZ.wnoV7sG'  # mprpg11
+    alberto:
+      email: albebaco@once.es
+      name: Alberto Barragán
+      password: '$2b$12$OQKpTPSNI4RiC56GDoR6yuiP6r4ZlDCeFvl0wU3WKaD7QS9bJpJrC'  # amh123
+cookie:
+  expiry_days: 0
+  key: some_signature_key
+  name: some_cookie_name
+
+# Used SQLite data base
+#
+database:
+  path: db
+  queries: queries.sql
+
+# Directorio donde poner los ficheros generados
+#
+outputDir: files
